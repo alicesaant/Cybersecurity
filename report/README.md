@@ -60,7 +60,7 @@ First, both virtual machines are started.
     </p>
 
 3. **Attempt to access the web service**  
-    By navigating to 'http://10.0.2.5:8180' in the browser, the page displays "Welcome to nginx". This response indicates that the server is running the nginx web server software but has not been configured with any specific web content or applications to serve. Therefore, more information gathering is necessary to continue the penetration test.
+    By navigating to http://10.0.2.5:8180 in the browser, the page displays "Welcome to nginx". This response indicates that the server is running the nginx web server software but has not been configured with any specific web content or applications to serve. Therefore, more information gathering is necessary to continue the penetration test.
 
     <p align="center">
     <img src="images/9.png" >
@@ -78,7 +78,7 @@ First, both virtual machines are started.
     </p>
 
 5. **Exploring virtual hosts**  
-    We explore 'vhosts' by navigating to 'http://10.0.2.5:8180/vhosts'. This reveals a server name (mario.supermariohost.local), which is then mapped in the local hosts file using the nano editor to facilitate further exploration.
+    We explore 'vhosts' by navigating to http://10.0.2.5:8180/vhosts. This reveals a server name (mario.supermariohost.local), which is then mapped in the local hosts file using the nano editor to facilitate further exploration.
 
     `cd /etc`  
     `sudo nano hosts`  
@@ -124,7 +124,7 @@ First, both virtual machines are started.
     `# Password: luigi1`
 
 9. **Privilege escalation**  
-    We discover that the target system is running Linux kernel version 3.13.0. There is a known exploit for the 3.13.0 overlayfs local root in Ubuntu. We download it inside Kali Linux from 'https://www.exploit-db.com/exploits/37292/', rename the file to 'mario.c', and move it to the '/var/www/html' directory. In this way we can download the file in the target machine through apache2.
+    We discover that the target system is running Linux kernel version 3.13.0. There is a known exploit for the 3.13.0 overlayfs local root in Ubuntu. We download it inside Kali Linux from https://www.exploit-db.com/exploits/37292/, rename the file to 'mario.c', and move it to the '/var/www/html' directory. In this way we can download the file in the target machine through apache2.
 
     `sudo mv /home/kali/Downloads/mario.c /var/www/html`
 
@@ -148,7 +148,7 @@ First, both virtual machines are started.
     </p>
 
 10. **Downloading and cracking the flag zip**   
-    Finally from Kali we download the file 'flag.zip' from the URL 'http://10.0.2.5:8180/' and save it.
+    Finally from Kali we download the file 'flag.zip' from the URL http://10.0.2.5:8180/ and save it.
 
     `wget http://10.0.2.5:8180/flag.zip`
     
