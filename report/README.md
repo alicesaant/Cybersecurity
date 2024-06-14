@@ -124,7 +124,7 @@ First, both virtual machines are started.
     `# Password: luigi1`
 
 9. **Privilege escalation**  
-    We discover that the target system is running Linux kernel version 3.13.0. There is a known exploit for the 3.13.0 overlayfs local root in Ubuntu. We download it inside Kali Linux from https://www.exploit-db.com/exploits/37292/, rename the file to 'mario.c', and move it to the '/var/www/html' directory. In this way we can download the file in the target machine through apache2.
+    We discover that the target system is running Linux kernel version 3.13.0. There is a known exploit for the 3.13.0 overlayfs local root in Ubuntu. We download it inside Kali Linux from https://www.exploit-db.com/exploits/37292/, rename the file to 'mario.c', and move it to the '/var/www/html' directory. In this way we can upload the file to the target machine through apache2.
 
     `sudo mv /home/kali/Downloads/mario.c /var/www/html`
 
